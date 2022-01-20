@@ -25,6 +25,12 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    /// Note: If you are using a Scaffold with an AppBar, the appropriate
+    /// spacing will be calculated at the top of the screen without needing to
+    /// wrap the Scaffold in a SafeArea and the status bar background will be
+    /// affected by the AppBar colour.
+    /// If you wrap the Scaffold in a SafeArea, then the status bar area will
+    /// have a black background rather than be influenced by the AppBar.
     return Scaffold(
       appBar: AppBar(
         title: const Text('News'),

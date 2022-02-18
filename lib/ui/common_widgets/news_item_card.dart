@@ -15,14 +15,10 @@ class NewsItemCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            // Image.asset(article.urlToImage ?? 'No Image')
-            // 2 ways to show image: NetworkImage or Image.asset()
             SizedBox(
               width: 150.0,
               height: 150.0,
-              child: Image(
-                image: NetworkImage(article?.urlToImage ?? ''),
-              ),
+              child: Image.network(article?.urlToImage ?? ''),
             ),
             Expanded(
               child: Column(

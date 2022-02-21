@@ -1,7 +1,5 @@
 import 'package:chopper/chopper.dart';
-import 'package:news_app_flutter/network/model_converter.dart';
-import 'package:news_app_flutter/network/model_response.dart';
-import 'package:news_app_flutter/models/news_article_model.dart';
+import 'package:news_app_flutter/news_app.dart';
 
 part 'news_api_service.chopper.dart';
 
@@ -13,11 +11,11 @@ const String newsApiUrl = "https://newsapi.org/v2/";
 @ChopperApi()
 abstract class NewsApiService extends ChopperService {
   @Get(path: 'top-headlines')
-  Future<Response<Result<NewsResponse>>> getTopHeadlines(
+  Future<Response<NetworkResult<NewsResponse>>> getTopHeadlines(
       {@Query('country') String country = 'us'});
 
   @Get(path: 'everything')
-  Future<Response<Result<NewsResponse>>> getEveryThing(
+  Future<Response<NetworkResult<NewsResponse>>> getEveryThing(
       @Query('q') String query);
 
   /// Creating an instance of the service that will fetch the news articles

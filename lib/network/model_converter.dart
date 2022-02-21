@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:chopper/chopper.dart';
-import 'package:news_app_flutter/models/news_article_model.dart';
-import 'package:news_app_flutter/network/model_response.dart';
+import 'package:news_app_flutter/news_app.dart';
 
 /// Adding the API key to a request or transforming the response into data
 /// objects, is a job for converters and interceptors!
@@ -46,16 +45,18 @@ class ModelConverter implements Converter {
       final mapData = json.decode(body);
       if (mapData['status'] != null) {
         return response.copyWith<BodyType>(
-            body: Error(Exception(mapData['status'])) as BodyType);
+            body: NetworkError(Exception(mapData['status'])) as BodyType);
       }
 
       final newsResponse = NewsResponse.fromJson(mapData);
       return response.copyWith<BodyType>(
-          body: Success(newsResponse) as BodyType);
+          body: NetworkSuccess(newsResponse) as BodyType);
     } catch (e) {
       chopperLogger.warning(e);
       return response.copyWith<BodyType>(
-          body: Error(e as Exception) as BodyType);
+          body: NetworkError(e as Exception) as BodyType);
+      // !!!ERROR - type 'NetworkError<dynamic>' is not a subtype of
+      // type 'NetworkResult<NewsResponse>' in type cast
     }
   }
 

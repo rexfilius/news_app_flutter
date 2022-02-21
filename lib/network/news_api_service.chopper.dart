@@ -17,19 +17,19 @@ class _$NewsApiService extends NewsApiService {
   final definitionType = NewsApiService;
 
   @override
-  Future<Response<Result<NewsResponse>>> getTopHeadlines(
+  Future<Response<NetworkResult<NewsResponse>>> getTopHeadlines(
       {String country = 'us'}) {
     final $url = 'top-headlines';
     final $params = <String, dynamic>{'country': country};
     final $request = Request('GET', $url, client.baseUrl, parameters: $params);
-    return client.send<Result<NewsResponse>, NewsResponse>($request);
+    return client.send<NetworkResult<NewsResponse>, NewsResponse>($request);
   }
 
   @override
-  Future<Response<Result<NewsResponse>>> getEveryThing(String query) {
+  Future<Response<NetworkResult<NewsResponse>>> getEveryThing(String query) {
     final $url = 'everything';
     final $params = <String, dynamic>{'q': query};
     final $request = Request('GET', $url, client.baseUrl, parameters: $params);
-    return client.send<Result<NewsResponse>, NewsResponse>($request);
+    return client.send<NetworkResult<NewsResponse>, NewsResponse>($request);
   }
 }

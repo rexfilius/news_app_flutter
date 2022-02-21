@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_flutter/ui/screens/screens.dart';
+import 'package:news_app_flutter/news_app.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

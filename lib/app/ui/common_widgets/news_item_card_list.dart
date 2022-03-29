@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app_flutter/news_app.dart';
+import 'package:news_app_flutter/news_app_lib.dart';
 
-class NewsItemList extends StatelessWidget {
+/**class NewsItemList extends StatelessWidget {
   const NewsItemList({
     required this.articles,
     Key? key,
@@ -19,4 +18,4 @@ class NewsItemList extends StatelessWidget {
       },
     );
   }
-}
+}*/

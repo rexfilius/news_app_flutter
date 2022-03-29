@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_flutter/news_app.dart';
+import 'package:news_app_flutter/news_app_lib.dart';
 
-class NewsItem extends StatelessWidget {
+/**class NewsItem extends StatelessWidget {
   final Article? article;
 
   const NewsItem({required this.article, Key? key}) : super(key: key);
@@ -49,4 +49,4 @@ class NewsItem extends StatelessWidget {
       ),
     );
   }
-}
+}*/

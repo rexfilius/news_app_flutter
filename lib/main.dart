@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:logging/logging.dart';
-import 'package:news_app_flutter/ui/home.dart';
+import 'package:news_app_flutter/news_app_lib.dart';
 
 void main() {
   _setupLogging();
   runApp(const News());
+
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: AppColors.purple,
+    systemNavigationBarColor: AppColors.purple,
+  ));
 }
 
 void _setupLogging() {
@@ -21,11 +27,11 @@ class News extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'News',
+      routes: appRoutesMap,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
-      home: const Home(),
+      home: const HomeScreen(),
     );
   }
 }

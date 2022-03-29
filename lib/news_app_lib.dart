@@ -4,14 +4,15 @@ export 'app/routes/app_routes.dart';
 
 /// For the App Themes
 export 'app/ui/appthemes/app_colors.dart';
+export 'app/ui/appthemes/app_styles.dart';
 
 ///
 export 'app/data/network/models/news_article.dart';
 export 'app/data/network/models/news_headlines.dart';
 
 /// For the common widgets across screens
-export 'app/ui/common_widgets/news_item_card.dart';
-export 'app/ui/common_widgets/news_item_card_list.dart';
+export 'app/ui/common_widgets/news_item.dart';
+export 'app/ui/common_widgets/news_item_list.dart';
 
 /// For the AllNewsScreen
 export 'app/ui/screens/all_news/screens/all_news_screen.dart';

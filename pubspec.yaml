@@ -1,5 +1,5 @@
 name: news_app_flutter
-description: A Flutter app that dispalys news articles from an API
+description: A Flutter app that shows news articles from an API
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 

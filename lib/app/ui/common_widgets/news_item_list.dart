@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_flutter/app/data/network/http/news_api.dart';
 import 'package:news_app_flutter/news_app_lib.dart';
 
 class NewsItemList extends StatefulWidget {
@@ -36,22 +35,10 @@ class _NewsItemListState extends State<NewsItemList> {
               },
             );
           } else if (snapshot.hasError) {
-            return Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                'Oops! An error occurred ${snapshot.error.toString()}',
-                style: AppStyles.newsCardText1,
-              ),
-            );
+            return ErrorListState(snapshot: snapshot);
           }
         }
-        return const Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Text(
-            'Loading news articles...',
-            style: AppStyles.newsCardText1,
-          ),
-        );
+        return const LoadingListState(message: 'Loading news articles');
       },
     );
   }

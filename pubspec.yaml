@@ -19,6 +19,7 @@ dependencies:
   hive_flutter: ^1.1.0
   cached_network_image: ^3.2.0
   path_provider: ^2.0.9
+  webview_flutter: ^3.0.1
 
 dev_dependencies:
   flutter_test:

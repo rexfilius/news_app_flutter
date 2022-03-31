@@ -9,10 +9,13 @@ export 'app/ui/appthemes/app_styles.dart';
 ///
 export 'app/data/network/models/news_article.dart';
 export 'app/data/network/models/news_headlines.dart';
+export 'app/data/network/http/news_api.dart';
 
 /// For the common widgets across screens
 export 'app/ui/common_widgets/news_item.dart';
 export 'app/ui/common_widgets/news_item_list.dart';
+export 'app/ui/common_widgets/loading_list_state.dart';
+export 'app/ui/common_widgets/error_list_state.dart';
 
 /// For the AllNewsScreen
 export 'app/ui/screens/all_news/screens/all_news_screen.dart';

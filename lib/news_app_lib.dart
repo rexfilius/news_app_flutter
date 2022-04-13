@@ -6,6 +6,9 @@ export 'app/routes/app_routes.dart';
 export 'app/ui/appthemes/app_colors.dart';
 export 'app/ui/appthemes/app_styles.dart';
 
+/// For Utitlity functions and classes
+export 'app/utils/utils.dart';
+
 ///
 export 'app/data/network/models/news_article.dart';
 export 'app/data/network/models/news_headlines.dart';

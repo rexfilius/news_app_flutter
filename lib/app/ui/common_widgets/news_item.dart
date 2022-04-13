@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app_flutter/news_app_lib.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NewsItem extends StatelessWidget {
   final Article article;
@@ -30,15 +31,18 @@ class NewsItem extends StatelessWidget {
             children: [
               Text(
                 article.title ?? 'No title',
-                style: AppStyles.newsCardText1,
+                style: GoogleFonts.openSans(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 18,
+                ),
               ),
               Text(
                 article.description ?? 'No description',
-                maxLines: 3,
+                style: GoogleFonts.robotoCondensed(
+                  fontSize: 16,
+                ),
+                maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                "Source - ${article.source?.name}",
               ),
             ],
           ),

@@ -9,7 +9,7 @@ export 'app/ui/appthemes/app_styles.dart';
 ///
 export 'app/data/network/models/news_article.dart';
 export 'app/data/network/models/news_headlines.dart';
-export 'app/data/network/http/news_api.dart';
+export 'app/data/network/api/news_api.dart';
 
 /// For the common widgets across screens
 export 'app/ui/common_widgets/news_item.dart';

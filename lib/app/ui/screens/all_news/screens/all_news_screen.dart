@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// import 'package:news_app_flutter/app/ui/common_widgets/news_item_list2.dart';
+// import 'package:news_app_flutter/app/ui/common_widgets/news_item_list3.dart';
 import 'package:news_app_flutter/news_app_lib.dart';
 
 class AllNewsScreen extends StatelessWidget {
@@ -6,6 +8,9 @@ class AllNewsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const NewsItemList();
+    return const Scaffold(
+      backgroundColor: AppColors.black,
+      body: NewsItemList(),
+    );
   }
 }

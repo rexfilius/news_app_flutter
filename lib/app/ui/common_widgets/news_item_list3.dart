@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:news_app_flutter/news_app_lib.dart';
 import 'package:http/http.dart' as http;
-import 'package:news_app_flutter/api_token.dart';
+import 'package:news_app_flutter/private/api_token.dart';
 
 class NewsItemList3 extends StatefulWidget {
   const NewsItemList3({
@@ -75,7 +75,7 @@ class _NewsItemList3State extends State<NewsItemList3> {
         newsHeadlines = jsonDecode(response.body);
         final List<Article> fetchedArticles = newsHeadlines.articles!;
 
-        if (fetchedArticles.length > 0) {
+        if (fetchedArticles.isNotEmpty) {
           setState(() {
             articleList.addAll(fetchedArticles);
           });

@@ -9,6 +9,7 @@
 .history
 .svn/
 /lib/api_token.dart
+/lib/private/
 
 # IntelliJ related
 *.iml

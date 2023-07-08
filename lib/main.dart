@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:logging/logging.dart';
 import 'package:news_app_flutter/news_app_lib.dart';
 
 void main() {

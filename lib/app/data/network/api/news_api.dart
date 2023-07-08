@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:news_app_flutter/api_token.dart';
+import 'package:news_app_flutter/private/api_token.dart';
 import 'package:news_app_flutter/news_app_lib.dart';
 import 'package:http/http.dart' as http;
 
